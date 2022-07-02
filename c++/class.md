@@ -1,6 +1,6 @@
 # Classes
 
-see also: [[operator overloading]], [[special member functions]], [[inheritance]], [[virtual member function]], [[abstract_class]], [[const member functions]]
+see also: [operator overloading](operator_overloading.md), [special member functions](special_member_functions.md), [inheritance](inheritance.md), [virtual member function](virtual_member_function.md), [abstract class](abstract_class.md), [const member functions](const_member_functions.md)
 
 ## Definition
 
@@ -57,7 +57,7 @@ class Square {
 
 ## Member access
 - outside the class
-    - members are accessed with the dot `object_name.member_name` like in [[data structure]]
+    - members are accessed with the dot `object_name.member_name` like in [data structure](data structure.md)
 - from a member function
     - `member_name`
     - `this->member_name`
@@ -121,7 +121,7 @@ Rectangle::Rectangle (int x, int y) : width(x) { height=y; }
 ## Pointers to classes
 - Objects can also be pointed to by pointers
 - Example `Rectangle * prect;`
-- Same as with [[data structure]], members can than be accessed using the arrow operator (->) `foo->area();`
+- Same as with [data structure](data structure.md), members can than be accessed using the arrow operator (->) `foo->area();`
 Example:
 ```C++
   Rectangle obj (3, 4);

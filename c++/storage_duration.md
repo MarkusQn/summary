@@ -6,16 +6,16 @@
     - local objects have this storage duration, except those declared `static`, `extern` or `thread_local`.
 
 - **dynamic** storage duration
-    - allocated and deallocated upon request by using [[dynamic memory]] allocation functions
+    - allocated and deallocated upon request by using [dynamic memory](dynamic_memory.md) allocation functions
     - Stored on the *heap*
     - Stack allocation is simpler - and much faster! - than heap allocation. 
-    - @Google: normally don't call `new` or `delete` directly. Use `std::make_unique` and `std::unique_ptr`, see [[smart pointer]]
+    - @Google: normally don't call `new` or `delete` directly. Use `std::make_unique` and `std::unique_ptr`, see [smart pointer](smart_pointer.md)
 
 - **static** storage duration
     - allocated when the program begins and deallocated when the program ends.
     - objects declared at namespace scope (including global namespace) have this storage duration, plus those declared with `static` or `extern`.
     - variables have static storage duration if not marked as `thread_local` and:
-        - declared at namespace [[scope]] (including global namespace)
+        - declared at namespace [scope](scope.md) (including global namespace)
         - `static` data member of a class
         - `static` variable defined in a function
     - @Google: discourages the use of global mutable state, better use `constexpr`

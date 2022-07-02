@@ -12,9 +12,9 @@ Level  | Precedence group             | Operator                                
 3      | Prefix (unary)               | `++` `--`                                               | prefix increment / decrement                      |                   | X
        |                              | `~` `!`                                                 | bitwise NOT / logical NOT                         |                   | X
        |                              | `+` `-`                                                 | unary prefix                                      |                   | X
-       |                              | `&`{: .diff_to_java } `*`{: .diff_to_java }             | reference / dereference, see [[pointer]]          |                   | X
-       |                              | `new`[^1] `delete`{: .diff_to_java }                    | allocation / deallocation, see [[dynamic memory]] |                   | X
-       |                              | `sizeof`{: .diff_to_java }                              | [[sizeof operator]]                               |                   | X
+       |                              | `&`{: .diff_to_java } `*`{: .diff_to_java }             | reference / dereference, see [pointer](pointer.md)          |                   | X
+       |                              | `new`[^1] `delete`{: .diff_to_java }                    | allocation / deallocation, see [dynamic memory](dynamic_memory.md) |                   | X
+       |                              | `sizeof`{: .diff_to_java }                              | [sizeof operator](sizeof_operator.md)                               |                   | X
        |                              | `(type)`[^1]                                            | C-style type-casting                              |                   | X
 4      | Pointer-to-member            | `.*`{: .diff_to_java } `->*`{: .diff_to_java }          | access pointer                                    | X                 |
 5      | Arithmetic: scaling          | `*` `/` `%`                                             | multiply, divide, modulo                          | X                 |
@@ -29,7 +29,7 @@ Level  | Precedence group             | Operator                                
 14     | Disjunction                  | `||`                                                    | logical OR                                        | X                 |
 15     | Assignment-level expressions | `=` `*=` `/=` `%=` `+=` `-=` `>>=` `<<=` `&=` `^=` `|=` | assignment / compound assignment                  |                   | X
        |                              | `?:`[^4]                                                | conditional operator                              |                   | X
-16     | Sequencing                   | `,`{: .diff_to_java }                                   | [[comma operator]]                                | X                 |
+16     | Sequencing                   | `,`{: .diff_to_java }                                   | [comma operator](comma_operator.md)                                | X                 |
 
 [^1]: In Java `new` and `(type)` are in a own group just after the Prefix (3) group.
 [^2]: In addition Java also has `>>>`

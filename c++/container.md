@@ -1,6 +1,6 @@
 # Container
 - a collection of objects of some object type T
-- all containers are [[class templates]] that are parameterized at least by the type of the values that they will store
+- all containers are [class templates](class_templates.md) that are parameterized at least by the type of the values that they will store
 - two broad classes of containers
     - sequence-based
         - most important:

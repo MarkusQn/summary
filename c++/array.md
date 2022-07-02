@@ -37,7 +37,7 @@ int foo [] = { 16, 2, 77, 40, 12071 };
 ```C++
 int foo[] { 16, 2, 77, 40, 12071 };
 ```
-- Like other variables, arrays with *static storage* (global or namespace [[scope]]) are default-initialized if not explicit initialized.
+- Like other variables, arrays with *static storage* (global or namespace [scope](scope.md)) are default-initialized if not explicit initialized.
 
 ## Accessing the values of an array
 - Syntax

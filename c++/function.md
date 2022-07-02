@@ -33,7 +33,7 @@ int protofunction (int, int);
 
 ## Arguments passed by value and by reference
 - by default parameters are passed *by value*: values are copied (copy constructor is called), changes are not given back
-- to pass *by reference*, a [[reference]] can be passed
+- to pass *by reference*, a [reference](reference.md) can be passed
 - Example:
 ```C++
 void swap (int& a, int& b)
@@ -58,7 +58,7 @@ string concatenate (const string& a, const string& b)
 
 ## return passed by value and by reference
 - same as with arguments, by default copied back (copy constructor called)
-- to pass by *by reference*, a [[reference]] can be returned (it returns a implicit pointer)
+- to pass by *by reference*, a [reference](reference.md) can be returned (it returns a implicit pointer)
     - DON'T return a local variable of the function (it will be ereased)
     - DON'T return reference to a memory location that was allocated in the function
 

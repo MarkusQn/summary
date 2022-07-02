@@ -11,10 +11,10 @@ template < TemplateParameterList > FunctionDefinition
 - template parameters can be types:
     - These parameters are generic template types `class` or `typename` followed by an identifier
     - `class` or `typename` are synonyms 
-    - The generic type can be used in [[function]]s as
+    - The generic type can be used in [function](function.md)s as
         - parameter type
         - return type
-        - [[variable]] declaration
+        - [variable](variable.md) declaration
     - Example:
 ```C++
 template <class T>

@@ -1,6 +1,6 @@
 # Copy elision
 
-- Omits [[copy constructor]] and [[move constructor]]s, resulting in zero-copy pass-by-value semantics
+- Omits [copy constructor](copy_constructor.md) and [move constructors](move_constructor.md), resulting in zero-copy pass-by-value semantics
 - The objects are constructed directly into the storage where they would otherwise be copied/moved to.
 - Mandatory elision of copy/move operations.
     - The copy/move constructors need not be present or accessible.

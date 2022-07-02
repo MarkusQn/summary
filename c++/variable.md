@@ -31,6 +31,6 @@ int x (0);
 int x {0};
 ```
 - Variables that are not explicitly initialized
-    - with *static storage* (global or namespace [[scope]]) are automatically initialized to zeroes
-    - with *automatic storage* (block [[scope]]) are left uninitialized, and thus have an undetermined value.
+    - with *static storage* (global or namespace [scope](scope.md)) are automatically initialized to zeroes
+    - with *automatic storage* (block [scope](scope.md)) are left uninitialized, and thus have an undetermined value.
 

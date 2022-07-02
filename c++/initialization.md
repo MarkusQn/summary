@@ -2,8 +2,8 @@
 - Provides initial value of a variable at the time of construction.
 - Initial value may be provided in:
     - initializer section of a declarator
-    - a `new` expression (see [[dynamic_memory]] )
-    - [[function calls]]: function parameters and the function return values
+    - a `new` expression (see [dynamic memory](dynamic_memory.md) )
+    - [function_calls](function calls.md): function parameters and the function return values
 
 - Non-local static and thread local variables are first static initialized
     - If relevant, **constant initialization**: sets the initial values of the static variables to a compile-time constant. 

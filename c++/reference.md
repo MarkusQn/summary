@@ -6,14 +6,14 @@
 - A reference is a lvalue.
 
 - *lvalue reference*
-    - reference to an lvalue (see [[value category]])
+    - reference to an lvalue (see [value category](value_category.md))
     - Declaration: `int& lref = a;`
     - Use:
         - alias to an existing object
         - to implement pass-by-reference semantics
 
 - *rvalue reference*
-    - reference to an rvalue (see [[value category]])
+    - reference to an rvalue (see [value category](value_category.md))
     - Declaration: `int&& rref = 20;`
     - extend the lifespan of the temporary object to which they are assigned
     - Non-const rvalue references allow you to modify the rvalue.

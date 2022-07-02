@@ -3,8 +3,8 @@
 ```C++
 [ captures ] ( params ) specs { body }
 ```
-- a lambda is an unnamed [[function object]] capable of capturing variables in scope.
-    - `captures` corresponds to member variables of [[function object]]
+- a lambda is an unnamed [function object](function_object.md) capable of capturing variables in scope.
+    - `captures` corresponds to member variables of [function object](function_object.md)
     - `params` corresponds to parameter of `operator()`
     -  return type corresponds to return type of `operator()`
     - `body` corresponds to body of `operator()`
