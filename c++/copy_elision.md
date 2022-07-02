@@ -1,0 +1,32 @@
+# Copy elision
+
+- Omits [[copy constructor]] and [[move constructor]]s, resulting in zero-copy pass-by-value semantics
+- The objects are constructed directly into the storage where they would otherwise be copied/moved to.
+- Mandatory elision of copy/move operations.
+    - The copy/move constructors need not be present or accessible.
+    - Cases:
+        - *return value optimization (RVO)*: In a **return statement**, when
+            - the operand is a prvalue
+            - of the same class type as the function return type
+        - In the **initialization** of an object,when
+            - the initializer expression is a prvalue
+            - of the same class type as the variable type
+- Non-mandatory elision of copy/move operations
+    - Even though the copy/move constructor is not called, it still must be present and accessible (as if no optimization happened at all)
+    - Cases:
+        - *named return value optimization (NRVO)* In a **return statement**, when
+            - the operand is the name of a non-volatile object with automatic storage duration,
+            - which isn't a function parameter or a catch clause parameter,
+            - and which is of the same class type as the function return type. 
+        - In a **throw-expression**, when
+            - the operand is the name of a non-volatile object with automatic storage duration,
+            - which isn't a function parameter or a catch clause parameter,
+            - and whose scope does not extend past the innermost try-block
+        - In a **catch clause**, when
+            - the argument is of the same type as the exception object thrown,
+            - the copy of the exception object is omitted and
+            - the body of the catch clause accesses the exception object directly, as if caught by reference.
+        - In **coroutines**, copy/move of the parameter into coroutine state may be elided where this does not change the behavior of the program 
+- Two major rules of thumb for taking advantage of copy elision:
+    - Return local variables *by-value*
+    - If you need to make a copy of a function parameter, pass it by value.
