@@ -1,6 +1,6 @@
 # C++
 
-- [[types]]
+- [types](types.md)
     - [[fundamental data types]]
     - [[array]]
     - [[char_array_and_string]]
