@@ -1,4 +1,6 @@
 # Class templates
+[c++ reference](https://en.cppreference.com/w/cpp/language/class_template)
+
 - class templates allow classes to have members that use template parameters as types.
 - function definition (containing body) outside of the class definition must contain also the class template parameters.
 - A template class can be used bz providing the template arguments in `< .. >`
@@ -23,6 +25,36 @@ int main () {
   cout << myobject.getmax();
   return 0;
 }
+```
+
+## member templates
+- template member function, possible within:
+    - an ordinary (unparameterized) class
+    - a class template
+- restriction: not allowed to be virtual
+
+### type inference
+- member templates can be used for type inference.
+- Example:
+```C++
+template <typename T1, typename T2>
+struct pair {
+  T1 first;  T2 second;
+  ...
+  template <typename U1, typename U2>
+  pair(const pair<U1, U2> &p) : first(p.first), second(p.second) {}
+};
+```
+
+- `U1`, `U2` must be convertible to `T1`, `T2` respective
+- This constructor allows
+```C++
+city_to_state_map->insert(std::make_pair(city, state));
+```
+
+- instead of
+```C++
+city_to_state_map->insert(std::pair<char*, char*>(city, state));
 ```
 
 ## Template specialization

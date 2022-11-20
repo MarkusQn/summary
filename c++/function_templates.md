@@ -10,7 +10,7 @@ template < TemplateParameterList > FunctionDefinition
     - comma seperated list of template parameters
 - template parameters can be types:
     - These parameters are generic template types `class` or `typename` followed by an identifier
-    - `class` or `typename` are synonyms 
+    - `class` or `typename` are synonyms (google: prefer `typename`)
     - The generic type can be used in [function](function.md)s as
         - parameter type
         - return type
